@@ -2,6 +2,7 @@ from aocd import data
 
 '''
 PART 1: 
+
     Find the maximal amount of calories carried by an elf.
 '''
 list_elf_cal = [s.split() for s in data.split('\n\n') if s]
@@ -22,8 +23,10 @@ print('The maximal amount of calories carried by an elf is: \t{}'.format(calsum_
 
 '''
 PART 2: 
+
     Find the top three Elves carrying the most Calories. 
     How many Calories are those Elves carrying in total?
+
 '''
 calsum_top_three = sum(calsum_per_elf[-3:])
 print('\nThe sum of the top three carrying elves is: \t{}'.format(calsum_top_three))

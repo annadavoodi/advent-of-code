@@ -1,7 +1,5 @@
 from aocd import data
 
-inp = '    [D]    \n[N] [C]    \n[Z] [M] [P]\n 1   2   3 \n\nmove 1 from 2 to 1\nmove 3 from 1 to 3\nmove 2 from 2 to 1\nmove 1 from 1 to 2'
-
 crates = [element for element in data.split('\n') if not element.startswith('m') and not element == '']
 numbers = [int(number) for number in crates[-1] if not number == ' ']
 rows = [crates[i].split(' ') for i in range(len(crates)-1)]
@@ -36,12 +34,12 @@ for key,value in crates_d.items():
     value.reverse()
     crates_d[key] = value
 
-
 instructions = [element for element in data.split('\n') if element.startswith('m')]
 instructions = [string.split() for string in instructions]
 amount = [int(instruction[1]) for instruction in instructions]
 start = [int(instruction[3]) for instruction in instructions]
 stop = [int(instruction[5]) for instruction in instructions]
+
 ''' PART 1:
 for i in range(len(amount)):
     #move x from y to z
@@ -55,6 +53,7 @@ for i in range(len(amount)):
         x -= 1
 '''
 
+'''PART 2:'''
 for i in range(len(amount)):
     #move x from y to z
     temp_list = []
